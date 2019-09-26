@@ -142,7 +142,7 @@ TBitField TBitField::operator|(const TBitField &bf) // операция "или"
 		tmp.pMem[i] = pMem[i];
 	}
 
-	for (int i = 0; i < bf.MemLen; i++)//correct
+	for (int i = 0; i < bf.MemLen; i++)
 	{
 		(tmp.pMem[i] |= bf.pMem[i]);
 	}
@@ -182,12 +182,6 @@ TBitField TBitField::operator~(void) // отрицание
 		{
 			tmp.SetBit(i);
 		}
-
-		/*if (GetBit(i) == 1)
-		{
-			tmp.ClrBit(i);
-		}*/
-
 	}
 	return tmp;
 }
